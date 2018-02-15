@@ -1,11 +1,11 @@
 Package: DCTFmisc
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Functions to Aid in Data Curation
 Version: 0.1.0
 Author: D Nieboer
 Maintainer: Daan Nieboer <d.nieboer@erasmusmc.nl>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Functions to aid in data curation
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1

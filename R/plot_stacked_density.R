@@ -1,3 +1,14 @@
+#' Create a stacked stacked density chart
+#'
+#' @param x values for the density plot.
+#' @param grp variable containing the membership to groups.
+#' @param xlab label of the x-axis.
+#' @param ylab label of the y-axis.
+#' @param y_labels labels at the ticks of the y-axis.
+#' @return A stacked density chart showing the density of \code{x} in the different groups contained in \code{grp}
+
+
+
 plot_stacked_density <- function(x, grp, xlim, xlab, ylab, y_labels = NULL){
   n_grp      <- length(unique(grp))
   unique_grp <- sort(unique(grp))
