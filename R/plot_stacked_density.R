@@ -1,6 +1,12 @@
-plot_stacked_density <- function(x, grp, xlim, xlab, ylab){
+plot_stacked_density <- function(x, grp, xlim, xlab, ylab, y_labels = NULL){
   n_grp      <- length(unique(grp))
   unique_grp <- sort(unique(grp))
+  if(is.null(y_labels)){
+    y_labels <- unique_grp
+  }
+  if(length(unique_grp)!=length(y_labels)){
+    stop("Nr. of groups not equal to the number of y_labels!")
+  }
 
   dens_list <- list()
 
