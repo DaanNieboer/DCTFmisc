@@ -22,7 +22,7 @@ plot_stacked_density <- function(x, grp, xlim, xlab, ylab, y_labels = NULL){
     abline(h = i, lwd = 0.5)
   }
   axis(1)
-  axis(2, at = 1:n_grp, labels = unique_grp,las = 2)
+  axis(2, at = 1:n_grp, labels = y_labels,las = 2)
 
   mtext(side = 1, line = 2, xlab)
   mtext(side = 2, line = 2, ylab)
