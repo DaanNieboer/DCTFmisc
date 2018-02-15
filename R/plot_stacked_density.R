@@ -9,7 +9,7 @@ plot_stacked_density <- function(x, grp, xlim, xlab, ylab){
        axes = FALSE, xlab = "", ylab = "")
 
   for(i in 1:n_grp){
-    dens <- density(x[grp==unique_grp[i]])
+    dens <- density(x[grp==unique_grp[i]], na.rm = T)
     max_y <- max(dens$y)
     lines(  dens$x, 0.8 * dens$y/max_y + i)
     polygon(dens$x, 0.8 * dens$y/max_y + i, col = rgb(0, 0, 0, 0.4), border = NA)
