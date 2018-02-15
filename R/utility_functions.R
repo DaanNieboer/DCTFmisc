@@ -6,5 +6,6 @@ filter_groups_by_size <- function(x, grp, min_size = 3){
 
   res <- data.frame(value = x, group = grp)
   res <- res[res$group %in% grp_sel, ]
+  res <- res[!is.na(res$value), ]
   return(res)
 }
