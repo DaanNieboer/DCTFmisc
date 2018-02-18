@@ -4,6 +4,7 @@
 #' @param grp variable containing the membership to groups.
 #' @param xlab label of the x-axis.
 #' @param ylab label of the y-axis.
+#' @param xlim plotting limits of the x-axis.
 #' @param y_labels labels at the ticks of the y-axis.
 #' @return A stacked density chart showing the density of \code{x} in the different groups contained in \code{grp}
 

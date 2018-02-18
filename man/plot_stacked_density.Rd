@@ -4,12 +4,15 @@
 \alias{plot_stacked_density}
 \title{Create a stacked stacked density chart}
 \usage{
-plot_stacked_density(x, grp, xlim, xlab, ylab, y_labels = NULL)
+plot_stacked_density(x, grp, xlim = c(0, 1), xlab = "Value",
+  ylab = "Group", y_labels = NULL)
 }
 \arguments{
 \item{x}{values for the density plot.}
 
 \item{grp}{variable containing the membership to groups.}
+
+\item{xlim}{plotting limits of the x-axis.}
 
 \item{xlab}{label of the x-axis.}
 
