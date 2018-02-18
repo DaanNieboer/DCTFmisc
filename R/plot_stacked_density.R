@@ -9,7 +9,7 @@
 
 
 
-plot_stacked_density <- function(x, grp, xlim, xlab, ylab, y_labels = NULL){
+plot_stacked_density <- function(x, grp, xlim = c(0, 1), xlab = "Value", ylab = "Group", y_labels = NULL){
   n_grp      <- length(unique(grp))
   unique_grp <- sort(unique(grp))
   if(is.null(y_labels)){
