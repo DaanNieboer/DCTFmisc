@@ -6,11 +6,18 @@
 #' @param ylab label of the y-axis.
 #' @param xlim plotting limits of the x-axis.
 #' @param y_labels labels at the ticks of the y-axis.
+#' @param mar A numeric vector which give the margin on the four sides of  the plot. For more detail \code{?par}.
+#' @param mgp The margin line for the axis title, labels and line. For more detail \code{?par}.
+#' @param tck The length of the tick marks. For more detail \code{?par}.
+#' @param ... Further arguments passed to \code{par}.
 #' @return A stacked density chart showing the density of \code{x} in the different groups contained in \code{grp}
 
 
 
-plot_stacked_density <- function(x, grp, xlim = c(0, 1), xlab = "Value", ylab = "Group", y_labels = NULL){
+plot_stacked_density <- function(x, grp, xlim = c(0, 1), xlab = "Value",
+                                 ylab = "Group", y_labels = NULL,
+                                 mar = c(3, 5, 3, 2, 1), mgp = c(2,.7,0),
+                                 tck = -.01,...){
   n_grp      <- length(unique(grp))
   unique_grp <- sort(unique(grp))
   if(is.null(y_labels)){
@@ -22,9 +29,9 @@ plot_stacked_density <- function(x, grp, xlim = c(0, 1), xlab = "Value", ylab = 
 
   dens_list <- list()
 
-  par (mar=c(3,3,2,1), mgp=c(2,.7,0), tck=-.01)
+  par(mar = mar, mgp = mgp, tck = tck,...)
   plot(1, type = "n", xlim = xlim, ylim = c(1, n_grp + 2),
-       axes = FALSE, xlab = "", ylab = "")
+       axes = FALSE, xlab = xlab, ylab = ylab)
 
   for(i in 1:n_grp){
     dens <- density(x[grp==unique_grp[i]])
@@ -35,7 +42,4 @@ plot_stacked_density <- function(x, grp, xlim = c(0, 1), xlab = "Value", ylab = 
   }
   axis(1)
   axis(2, at = 1:n_grp, labels = y_labels,las = 2)
-
-  mtext(side = 1, line = 2, xlab)
-  mtext(side = 2, line = 2, ylab)
 }
