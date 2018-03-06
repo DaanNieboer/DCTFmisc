@@ -16,7 +16,7 @@
 
 plot_stacked_density <- function(x, grp, xlim = c(0, 1), xlab = "Value",
                                  ylab = "Group", y_labels = NULL,
-                                 mar = c(3, 5, 3, 2, 1), mgp = c(2,.7,0),
+                                 mar = c(3, 5, 2, 1), mgp = c(2,.7,0),
                                  tck = -.01,...){
   n_grp      <- length(unique(grp))
   unique_grp <- sort(unique(grp))
