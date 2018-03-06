@@ -5,7 +5,8 @@
 \title{Create a stacked stacked density chart}
 \usage{
 plot_stacked_density(x, grp, xlim = c(0, 1), xlab = "Value",
-  ylab = "Group", y_labels = NULL)
+  ylab = "Group", y_labels = NULL, mar = c(3, 5, 3, 2, 1), mgp = c(2,
+  0.7, 0), tck = -0.01, ...)
 }
 \arguments{
 \item{x}{values for the density plot.}
@@ -19,6 +20,14 @@ plot_stacked_density(x, grp, xlim = c(0, 1), xlab = "Value",
 \item{ylab}{label of the y-axis.}
 
 \item{y_labels}{labels at the ticks of the y-axis.}
+
+\item{mar}{A numeric vector which give the margin on the four sides of  the plot. For more detail \code{?par}.}
+
+\item{mgp}{The margin line for the axis title, labels and line. For more detail \code{?par}.}
+
+\item{tck}{The length of the tick marks. For more detail \code{?par}.}
+
+\item{...}{Further arguments passed to \code{par}.}
 }
 \value{
 A stacked density chart showing the density of \code{x} in the different groups contained in \code{grp}
